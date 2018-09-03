@@ -23,14 +23,15 @@ class EventListItem extends Component {
         <Segment>
           <span>
             <Icon name="clock" />
-            {event.date} |<Icon name={event.venue} /> time
+            {event.date} |<Icon name="map marker alternate" /> {event.venue}
           </span>
         </Segment>
         <Segment secondary>
           <List horizontal>
-            {event.attendees.map(attendee => (
-              <EventListAttendee key={attendee.id} attendee={attendee} />
-            ))}
+            {event.attendees &&
+              event.attendees.map(attendee => (
+                <EventListAttendee key={attendee.id} attendee={attendee} />
+              ))}
           </List>
         </Segment>
         <Segment clearing>
