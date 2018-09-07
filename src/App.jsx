@@ -5,7 +5,7 @@ import NavBar from "./features/nav/NavBar/NavBar";
 import { Route, Switch } from "react-router-dom";
 import HomePage from "./features/events/Home/Homepage";
 import SettingsDashboard from "./features/user/Settings/SettingsDashboard";
-
+import TestComponent from "./features/testarea/TestComponent";
 class App extends Component {
   render() {
     return (
@@ -21,6 +21,7 @@ class App extends Component {
               <Container className="main">
                 <Switch>
                   <Route path="/events" component={EventDashboard} />
+                  <Route path="/test" component={TestComponent} />
                   <Route path="/events/:id" component={EventDashboard} />
                   <Route path="/people" component={EventDashboard} />
                   <Route path="/profile/:id" component={EventDashboard} />
